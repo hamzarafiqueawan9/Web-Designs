@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.title {
+    font-weight: lighter;
+    font-size: 48px;
+    margin-bottom: 0px;
+}
+
+.images img {
+    box-shadow: 0px 2px 5px lightgray;
+    width: 480px;
+}
+.content{
+    width: 750px;
+    
+    margin-left: 20px;
+}
+.images p{
+    color: #565959;
+}
+.product{
+    
+    display: flex;
+}
+
+.link a{
+ color: #007185;
+}
+.content h2{
+    margin-bottom: 0px;
+}
+
+.content p{
+    font-size: 22px;
+    
+}
