@@ -1,0 +1,14 @@
+{
+  "name": "Scrim-s04vckm",
+  "description": "https://scrimba.com/learn-css-grid-c02k/~0g/s0u1579mjm/head",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vite": "latest"
+  },
+  "devDependencies": {}
+}
