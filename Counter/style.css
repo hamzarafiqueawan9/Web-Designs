@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #1e1f3b, #3e2f4c);
+}
+
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20em;
+    background-image: url("images/imag.jpg");
+    background-blend-mode: saturation;
+    background-size: cover;
+    padding: 20px;
+    width: 300px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    background: (0, 0, 0, 0.6);
+    Box-Shadow: 0 0 20px #7f5af0
+}
+
+#entr {
+    color: white;
+    font-family: sans-serif;
+
+    text-shadow: 0 0 30px solid black;
+
+
+}
+
+#display {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    font-size: 50px;
+    font-family: sans-serif;
+    color: white;
+    text-shadow: 1px 10px 20px black;
+
+
+}
+
+.counter>button {
+    width: 250px;
+    border: none;
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sve {
+    background-color: #2a9d8f;
+    color: white;
+}
+
+#inc {
+    background-color: #e63946;
+    color: #ffffff;
+}
+
+#sve:hover {
+    background-color: #21867a;
+}
+
+#inc:hover {
+    background-color: #c82333;
+}
