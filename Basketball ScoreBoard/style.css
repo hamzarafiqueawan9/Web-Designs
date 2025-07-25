@@ -1,0 +1,149 @@
+ @import url('https://fonts.cdnfonts.com/css/cursed-timer-ulil');
+
+ :root {
+     --dispfontf: 'Cursed Timer ULiL', sans-serif;
+     --headfontf: verdana;
+     --dispcolr: #F94F6D;
+     --backcolr: #1B244A;
+     --headcolr: #EEEEEE;
+     --scoreclr: #9AABD8;
+     --dispbkcolr: #080001;
+ }
+
+ body {
+     margin: 0%;
+     padding: 0%;
+
+ }
+
+ .container {
+     display: flex;
+     justify-content: space-around;
+     font-family: var(--headfontf);
+     background-color: var(--backcolr);
+     width: 575px;
+     height: 385px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: 10em;
+
+ }
+
+
+ .home {
+     display: flex;
+     flex-direction: column;
+     background-color: var(--backcolr);
+     width: 200px;
+     align-items: center;
+ }
+
+
+ .guest {
+     display: flex;
+     flex-direction: column;
+     background-color: var(--backcolr);
+     width: 200px;
+     align-items: center;
+ }
+
+ .guest>h3 {
+     font-size: 40px;
+     margin-bottom: 21px;
+     margin-top: 30px;
+
+     color: var(--headcolr);
+ }
+
+
+ .home>h3 {
+     font-size: 40px;
+     margin-bottom: 21px;
+     margin-top: 30px;
+     color: var(--headcolr);
+     margin-left: -5px;
+ }
+
+ .display {
+
+     color: var(--dispcolr);
+     font-family: var(--dispfontf);
+     width: 155px;
+     height: 150px;
+     background-color: var(--dispbkcolr);
+     border-radius: 8px;
+     margin-bottom: 0%;
+
+ }
+
+ .display>p {
+     font-size: 80px;
+     margin: 0%;
+     margin-top: 40px;
+     text-align: center;
+     padding-left: 20px;
+     padding-right: 18px;
+
+ }
+
+ .score {
+     display: flex;
+     margin-top: 2em;
+     color: var(--scoreclr);
+     gap: 10px;
+
+ }
+
+
+
+ #one,
+ #two,
+ #three {
+     margin-top: 10px;
+     font-size: 24px;
+     background-color: var(--backcolr);
+     border: none;
+     font-family: var(--dispfontf);
+     color: var(--scoreclr);
+     border: 2px solid;
+     border-radius: 5px;
+     padding: 06px;
+     margin-top: 0%;
+
+ }
+
+
+ #one:hover,
+ #two:hover,
+ #three:hover {
+     color: #5679da;
+
+ }
+
+.ngame{
+    display: flex;
+    flex-direction: column;
+     justify-content: end;
+     margin-top:345px;
+     margin-right: auto;
+     margin-left: auto;
+    position: absolute;
+}
+
+#new-game{
+    width: 300px;
+    margin-bottom: 0%;
+    height: 40px;
+   border-radius: 60px 60px 0px 0px ;
+        border: none;
+    font-family: var(--headfontf);
+    font-size: 25px;
+    font-weight: 600;
+    color:var(--headcolr);
+    background-color:#184cdb;
+}
+
+#new-game:hover{
+    text-shadow: 1px 1px 20px  black;
+    
+}
