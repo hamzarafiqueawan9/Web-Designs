@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: #1C1C1C;
+    display: flex;
+    justify-content: center;
+
+}
+
+.password{
+    background-color:#1F2937 ;
+    width: 550px;
+    height: 550px;
+    margin: 100px auto 0px auto;
+    text-align: start;
+}
+
+.password-h1{
+    margin: 115px 0px 0px 52px;
+    color:white;
+    font-family: 'inter' ;
+   
+}
+
+.password-h1 > span{
+color:#4adf86;
+}
+
+.password-p{
+    margin: 8px 0px 0px 52px ;
+    color: rgb(190, 190, 190);
+    font-family: sans-serif;
+
+}
+
+#password-btn{
+    width: 191px;
+    height: 42px;
+    border-radius: 10px;
+    border: none;
+    margin: 51px 0px 0px 52px;
+    background-color: #34a160;
+    color: white;
+    padding:0px 0px 0px 0px;
+}
+
+#password-disp{
+    border-bottom: 0.3px solid #2F3E53;
+    margin: 35px 52px 0px 52px;
+    width: 446px;
+    color: #0ed45e;
+    padding: 10px;
+    
+}
+.password-displ{
+    display: flex; 
+    
+}
+
+#password-disp1{
+    width: 211px;
+    height: 39px;
+    background-color: #273549;
+    border-radius: 6px;
+    margin: 35px 24px 115px 52px ;
+    color: #4adf86;
+}
+
+#password-disp2{
+    width: 211px;
+    height: 39px;
+    background-color: #273549;
+    border-radius: 6px;
+  margin: 35px 0px 115px 0px ;
+  color: #4adf86;
+}
