@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #2e004f, #4b0082);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    overflow-x: hidden;
+    /* avoid scrollbars during animation */
+}
+
+/* Back to Home link */
+.back-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-home a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.back-home a:hover {
+    background: #ff007f;
+    color: #fff;
+}
+
+.contact-container {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Contact Info Section */
+.contact-info {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    text-align: center;
+    opacity: 0;
+    /* for animation */
+}
+
+.contact-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.contact-info h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.contact-info p.role {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 25px;
+}
+
+.contact-info .box {
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.contact-info .box span {
+    display: block;
+    font-size: 14px;
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+/* Contact Form Section */
+.contact-form {
+    flex: 2;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 30px;
+    opacity: 0;
+    /* for animation */
+}
+
+.contact-form h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.contact-form p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ddd;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.row input {
+    flex: 1;
+}
+
+input,
+textarea {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #ff007f;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #ff3399;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* apply animation */
+.animate-left {
+    animation: slideInLeft 1s ease forwards;
+}
+
+.animate-right {
+    animation: slideInRight 1s ease forwards;
+    animation-delay: 0.3s;
+    /* delay so it comes after left side */
+}
