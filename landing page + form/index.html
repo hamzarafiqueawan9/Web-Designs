@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to TechFlow - Your Digital Solution</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">TechFlow</div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="nav" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+  
+    <main>
+       
+        <section id="home" class="welcome-section">
+            <div class="welcome-content">
+                <h1>Welcome to TechFlow</h1>
+                <p>Your trusted partner for innovative digital solutions and cutting-edge web technologies.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </section>
+
+        
+        <section id="about" class="about-section">
+            <div class="section-container">
+                <h2>About Us</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>TechFlow is dedicated to delivering world-class digital solutions that transform businesses. With over 10 years of experience in web development and design, we help organizations bring their visions to life.</p>
+                        <p>Our team of expert developers and designers work collaboratively to create responsive, user-friendly websites that engage and convert visitors into customers.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <h3>Responsive Design</h3>
+                            <p>Works perfectly on all devices</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>Fast Performance</h3>
+                            <p>Optimized for speed and efficiency</p>
+                        </div>
+                        <div class="feature-box">
+                            <h3>SEO Friendly</h3>
+                            <p>Built for search engine visibility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="contact" class="contact-section">
+            <div class="section-container">
+                <h2>Get In Touch</h2>
+                <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
+                <form class="contact-form" id="contact-form">
+                    <div id="success-message" class="success-message"></div>
+                    
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" id="name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" id="message-error"></span>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 TechFlow. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#social">Social Media</a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const contactForm = document.getElementById('contact-form');
+    const successMessage = document.getElementById('success-message');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+
+    function validateForm(event) {
+        event.preventDefault();
+
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+
+        let isValid = true;
+
+        nameError.textContent = '';
+        emailError.textContent = '';
+        messageError.textContent = '';
+        successMessage.textContent = '';
+        successMessage.style.display = 'none';
+
+        nameInput.classList.remove('input-error');
+        emailInput.classList.remove('input-error');
+        messageInput.classList.remove('input-error');
+
+        if (nameInput.value.trim() === '') {
+            nameError.textContent = 'Name is required.';
+            nameInput.classList.add('input-error');
+            isValid = false;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailInput.value.trim() === '') {
+            emailError.textContent = 'Email is required.';
+            emailInput.classList.add('input-error');
+            isValid = false;
+        } else if (!emailRegex.test(emailInput.value.trim())) {
+            emailError.textContent = 'Please enter a valid email address (e.g., user@example.com).';
+            emailInput.classList.add('input-error');
+            isValid = false;
+        }
+
+        if (messageInput.value.trim() === '') {
+            messageError.textContent = 'Message is required.';
+            messageInput.classList.add('input-error');
+            isValid = false;
+        }
+
+        if (isValid) {
+            successMessage.textContent = '✓ Message sent successfully! Thank you for contacting us.';
+            successMessage.style.display = 'block';
+
+            nameInput.value = '';
+            emailInput.value = '';
+            messageInput.value = '';
+
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+    }
+
+    contactForm.addEventListener('submit', validateForm);
+
+    document.getElementById('name').addEventListener('input', () => {
+        document.getElementById('name-error').textContent = '';
+        document.getElementById('name').classList.remove('input-error');
+    });
+
+    document.getElementById('email').addEventListener('input', () => {
+        document.getElementById('email-error').textContent = '';
+        document.getElementById('email').classList.remove('input-error');
+    });
+
+    document.getElementById('message').addEventListener('input', () => {
+        document.getElementById('message-error').textContent = '';
+        document.getElementById('message').classList.remove('input-error');
+    });
+</script>
+</html>
